@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "647744796859",
+    "project_id": "knowzyapp-5aefc",
+    "storage_bucket": "knowzyapp-5aefc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647744796859:android:6c877ee260ade58a82519e",
+        "android_client_info": {
+          "package_name": "com.example.knowzy_domain_based"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI9vV71zfOltGa6K2nQ6NSQH0HjvTfMy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
