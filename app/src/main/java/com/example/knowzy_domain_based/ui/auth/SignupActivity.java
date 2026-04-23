@@ -1,4 +1,4 @@
-package com.example.knowzy_domain_based.auth;
+package com.example.knowzy_domain_based.ui.auth;
 
 import android.content.Intent;
 import android.os.Bundle;

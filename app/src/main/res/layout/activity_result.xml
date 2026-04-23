@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvSituation"
+            android:text="Situation"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvMeaning"
+            android:text="Meaning"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvRisk"
+            android:text="Risk Level"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvConfidence"
+            android:text="Confidence"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
