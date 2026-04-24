@@ -1,5 +1,6 @@
 package com.example.knowzy_domain_based.auth;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -18,11 +19,13 @@ import java.util.Map;
 public class SignupActivity extends AppCompatActivity {
 
     EditText etFirstName, etLastName, etEmail, etPassword;
-    Button btnSignup;
+    Button btnSignup ;
+    TextView tvLogin;
 
     FirebaseAuth mAuth;
     FirebaseFirestore db;
 
+//    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +36,15 @@ public class SignupActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         btnSignup = findViewById(R.id.btnSignup);
+        tvLogin = findViewById(R.id.tvLogin);
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+
+        tvLogin.setOnClickListener(v -> {
+                    startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                    finish();
+                });
 
         btnSignup.setOnClickListener(v -> {
 
