@@ -1,4 +1,4 @@
-package com.example.knowzy_domain_based.auth;
+package com.example.knowzy_domain_based.ui.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.knowzy_domain_based.R;
-import com.example.knowzy_domain_based.home.DashboardActivity;
+import com.example.knowzy_domain_based.ui.home.HomeActivity; // ✅ FIXED
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -31,11 +31,10 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         tvSignup = findViewById(R.id.tvSignup);
         tvForgotPassword = findViewById(R.id.tvForgotPassword);
-        btnGoogleLogin = findViewById(R.id.btnGoogleLogin); // 🔥 IMPORTANT
+        btnGoogleLogin = findViewById(R.id.btnGoogleLogin);
 
         mAuth = FirebaseAuth.getInstance();
 
-        // LOGIN
         btnLogin.setOnClickListener(v -> {
 
             String email = etEmail.getText().toString().trim();
@@ -60,8 +59,11 @@ public class LoginActivity extends AppCompatActivity {
 
                             if (user != null && user.isEmailVerified()) {
                                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(this, DashboardActivity.class));
+
+                                // ✅ FIXED NAVIGATION
+                                startActivity(new Intent(this, HomeActivity.class));
                                 finish();
+
                             } else {
                                 Toast.makeText(this, "Verify your email first", Toast.LENGTH_LONG).show();
                             }
@@ -72,17 +74,14 @@ public class LoginActivity extends AppCompatActivity {
                     });
         });
 
-        // 🔥 SIGNUP BUTTON (MAIN FIX)
         btnGoogleLogin.setOnClickListener(v -> {
             startActivity(new Intent(LoginActivity.this, SignupActivity.class));
         });
 
-        // 🔥 SIGNUP TEXT (ALSO WORKING)
         tvSignup.setOnClickListener(v -> {
             startActivity(new Intent(LoginActivity.this, SignupActivity.class));
         });
 
-        // FORGOT PASSWORD
         tvForgotPassword.setOnClickListener(v -> {
 
             String email = etEmail.getText().toString().trim();

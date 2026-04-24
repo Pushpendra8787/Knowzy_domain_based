@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <include
+            layout="@layout/home_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/home_hero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/home_emergency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/home_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/home_recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/home_insights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/home_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/home_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>
