@@ -2,33 +2,71 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_marginBottom="16dp">
+    android:layout_marginBottom="20dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Input Methods"
-        android:textStyle="bold"/>
+        android:text="Choose Input Method"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#0A2540"
+        android:layout_marginBottom="12dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:orientation="horizontal">
 
+        <!-- VOICE -->
         <LinearLayout
             android:id="@+id/btnVoice"
             android:layout_width="0dp"
-            android:layout_height="120dp"
+            android:layout_height="130dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_glass_card"/>
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_glass_card"
+            android:elevation="5dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎤"
+                android:textSize="34sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voice"
+                android:textColor="#0A2540"/>
+        </LinearLayout>
+
+        <!-- TEXT -->
         <LinearLayout
             android:id="@+id/btnText"
             android:layout_width="0dp"
-            android:layout_height="120dp"
+            android:layout_height="130dp"
             android:layout_weight="1"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/bg_glass_card"/>
+            android:layout_marginStart="12dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_glass_card"
+            android:elevation="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⌨️"
+                android:textSize="34sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:textColor="#0A2540"/>
+        </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>

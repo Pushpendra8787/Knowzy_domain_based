@@ -2,11 +2,41 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_marginBottom="16dp">
+    android:layout_marginBottom="20dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Insights"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#0A2540"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Insight Card 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚠ High-risk situations detected"
+        android:background="@drawable/bg_glass_card"
+        android:padding="14dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Insight Card 2 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📄 Common legal issues this week"
+        android:background="@drawable/bg_glass_card"
+        android:padding="14dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Insight Card 3 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🛡 Suggested precautions"
+        android:background="@drawable/bg_glass_card"
+        android:padding="14dp"/>
+
 </LinearLayout>

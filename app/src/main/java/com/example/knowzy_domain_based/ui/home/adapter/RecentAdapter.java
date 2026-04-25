@@ -15,32 +15,40 @@ import java.util.List;
 
 public class RecentAdapter extends RecyclerView.Adapter<RecentAdapter.ViewHolder> {
 
-    private List<RecentCase> list;
+    private final List<RecentCase> caseList;
 
-    public RecentAdapter(List<RecentCase> list) {
-        this.list = list;
+    public RecentAdapter(List<RecentCase> caseList) {
+        this.caseList = caseList;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_recent_case, parent, false);
+
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        RecentCase item = list.get(position);
+
+        RecentCase item = caseList.get(position);
 
         holder.tvTitle.setText(item.getTitle());
         holder.tvStatus.setText(item.getStatus());
         holder.tvTime.setText(item.getTime());
+
+        // 🔥 Optional click (future: open result screen)
+        holder.itemView.setOnClickListener(v -> {
+            // TODO: Open Result Screen
+        });
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return caseList != null ? caseList.size() : 0;
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {

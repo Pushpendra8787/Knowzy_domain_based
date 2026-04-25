@@ -12,7 +12,27 @@ public class RecentCase {
         this.time = time;
     }
 
-    public String getTitle() { return title; }
-    public String getStatus() { return status; }
-    public String getTime() { return time; }
+    public String getTitle() {
+        return title != null ? title : "";
+    }
+
+    public String getStatus() {
+        return status != null ? status : "";
+    }
+
+    public String getTime() {
+        return time != null ? time : "";
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
 }

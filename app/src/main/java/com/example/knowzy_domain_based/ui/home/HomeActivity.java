@@ -39,10 +39,14 @@ public class HomeActivity extends AppCompatActivity {
 
     private Animation pressAnim, releaseAnim;
 
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        mAuth = FirebaseAuth.getInstance();
 
         initViews();
         initAnimations();
@@ -91,7 +95,7 @@ public class HomeActivity extends AppCompatActivity {
         applyTouchEffect(btnEmergency, EmergencyActivity.class);
 
         findViewById(R.id.btnVoice).setOnClickListener(v -> {
-            // TODO Voice
+            // TODO: Voice Input
         });
 
         findViewById(R.id.btnText).setOnClickListener(v ->
@@ -141,16 +145,16 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void openMenu() {
-        // Next: Navigation Drawer
+        // TODO: Navigation Drawer
     }
 
     private void openNotifications() {
-        // Next
+        // TODO: Notification screen
     }
 
     private void openProfile() {
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseUser user = mAuth.getCurrentUser();
 
         if (user == null) {
             startActivity(new Intent(this, LoginActivity.class));

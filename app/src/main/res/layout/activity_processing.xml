@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:gravity="center"
-    android:orientation="vertical">
+    android:padding="24dp"
+    android:background="@drawable/bg_main_gradient">
 
-    <!-- 🔄 Loader -->
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <!-- 🔹 Text -->
     <TextView
+        android:id="@+id/tvProcessingStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Analyzing your situation..."
-        android:layout_marginTop="16dp"
-        android:textSize="16sp"/>
+        android:text="Initializing..."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressProcessing"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="220dp"
+        android:layout_height="8dp"
+        android:max="100"
+        android:progress="10"/>
 
 </LinearLayout>
